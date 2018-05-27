@@ -364,7 +364,7 @@ textarea.input {
 }
 
 .header-search>form .search-input {
-  padding-left: 150px;
+  padding-left: 1px;
   padding-right: 45px;
 }
 
@@ -1694,13 +1694,11 @@ textarea.input {
   position: static;
   margin: 15px 0px;
 }
-
 /*=========================================================
 	12 -> RESPONSIVE
 ===========================================================*/
-
 @media only screen and (max-width: 991px) {
-  #home .home-wrap {
+    #home .home-wrap {
     margin-left: 0px;
   }
   #aside {
@@ -1710,6 +1708,739 @@ textarea.input {
     margin-bottom: 30px;
   }
 }
+h1 {
+    font-size: 1.1em;
+    border-bottom: hidden;
+    font-weight: normal;
+    text-align: center;
+    margin: 20px 0 15px 0
+}
+
+.accueil-contener {
+    width: 990px
+}
+
+.contener .id-ban {
+    margin-top: 30px
+}
+
+h2 span {
+    text-transform: uppercase;
+    font-weight: lighter;
+    color: #5e4e47;
+    background: white;
+    padding: 30px;
+    text-align: center
+}
+
+.fullBan {
+    width: 100%;
+    text-align: center;
+    display: block
+}
+
+    .fullBan image {
+        margin: auto
+    }
+
+h2 {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: lighter;
+    color: #5e4e47;
+    margin-bottom: 30px
+}
+
+    h2::before {
+        content: '/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////';
+        margin-right: 30px;
+        font-size: .3em;
+        color: #aaa;
+        letter-spacing: 2px;
+        position: absolute;
+        left: 0;
+        overflow: hidden;
+        width: 100%;
+        margin-top: 15px;
+        z-index: -1
+    }
+
+.Tiles-big {
+    white-space: nowrap;
+    height: 470px
+}
+
+    .Tiles-big a {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        display: block;
+        width: calc(50% - 15px);
+        text-align: center;
+        font-size: 2em;
+        background-size: cover;
+        height: 205px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden
+    }
+
+        .Tiles-big a::before {
+            content: '';
+            display: block;
+            position: absolute;
+            background-color: #000;
+            width: 100%;
+            height: 100%;
+            transition: all .2s;
+            z-index: -1;
+            background-size: cover;
+            filter: brightness(.9)
+        }
+
+        .Tiles-big a:hover::before {
+            filter: brightness(.7)
+        }
+
+        .Tiles-big a strong {
+            display: block;
+            margin: auto;
+            margin-top: 45%;
+            transition: .2s margin-top;
+            filter: brightness(1.3);
+            text-shadow: 0 0 25px rgba(0,0,0,.5)
+        }
+
+    .Tiles-big.spaced a strong {
+        font-size: .9em;
+        letter-spacing: 6px
+    }
+
+    .Tiles-big a:hover strong {
+        margin-top: 35%
+    }
+
+    .Tiles-big a span {
+        display: block;
+        margin: 20px auto;
+        display: block;
+        line-height: 50px;
+        width: 160px;
+        border: solid 1px white;
+        font-size: .7em;
+        border-radius: 4px;
+        background-color: rgba(255,255,255,.2);
+        transition: .2s max-height;
+        // transition:.2s max-width;
+        max-height: 0;
+        overflow: hidden;
+        max-width: 0;
+        opacity: 0;
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px)
+    }
+
+    .Tiles-big .third-link span, .Tiles-big .second-link span {
+        background-color: #a0d924;
+        border-color: transparent
+    }
+
+    .Tiles-big a:hover span {
+        max-height: 50px;
+        max-width: 160px;
+        opacity: 1
+    }
+
+    .Tiles-big .first-link {
+        height: 440px;
+        float: left
+    }
+
+    .Tiles-big .second-link {
+        float: right
+    }
+
+    .Tiles-big .third-link {
+        float: right;
+        margin-top: 30px
+    }
+
+    .Tiles-big.right .first-link {
+        height: 440px;
+        float: right
+    }
+
+    .Tiles-big.right .second-link {
+        float: left
+    }
+
+    .Tiles-big.right .third-link {
+        float: left;
+        margin-top: 30px
+    }
+
+    .Tiles-big a::before {
+        background-position: center
+    }
+
+    .Tiles-big .first-link::before {
+        background-image: url("//img.mesmateriaux.com/images/home_2017/deco.jpg")
+    }
+
+    .Tiles-big .second-link::before {
+        background-image: url("//img.mesmateriaux.com/images/home_2017/Home_2017_charpente.jpg")
+    }
+
+    .Tiles-big .third-link::before {
+        background-image: url("//img.mesmateriaux.com/images/home_2017/Home_2017_laine de verre.jpg")
+    }
+
+    .Tiles-big.right .first-link::before {
+        background-image: url("//img.mesmateriaux.com/images/home_2017/palettes.jpg")
+    }
+
+    .Tiles-big.right .second-link::before {
+        background-image: url("//img.mesmateriaux.com/images/home_2017/touret.jpg")
+    }
+
+    .Tiles-big.right .third-link::before {
+        background-image: url("//img.mesmateriaux.com/images/home_2017/tubes.jpg")
+    }
+
+    .Tiles-big a.second-link strong {
+        margin-top: 20%
+    }
+
+    .Tiles-big a.second-link:hover strong {
+        margin-top: 10%
+    }
+
+    .Tiles-big a.third-link strong {
+        margin-top: 20%
+    }
+
+    .Tiles-big a.third-link:hover strong {
+        margin-top: 10%
+    }
+
+.product-img {
+    width: 200px;
+    height: 200px;
+    display: inline-block
+}
+
+.listing-ban-left {
+    float: left
+}
+
+.listing-prod {
+    height: 440px
+}
+
+    .listing-prod .listing {
+        height: 370px
+    }
+
+.listing-cont-3 {
+    float: right;
+    width: 720px;
+    padding-top: 10px
+}
+
+.listing-prod .listing a {
+    margin: 10px;
+    margin-top: 10px;
+    display: inline-block;
+    float: left;
+    text-decoration: none;
+    color: #554e4d;
+    white-space: normal;
+    width: 201px;
+    padding: 10px;
+    transition: border .2s;
+    border-radius: 4px;
+    border: solid 1px transparent;
+    height: 335px
+}
+
+    .listing-prod .listing a:hover {
+        border-color: #e8e8e8
+    }
+
+.listing-prod .listing .product-name {
+    font-size: 1em;
+    display: block;
+    height: 54px
+}
+
+#nos-selections {
+    margin-bottom: 30px
+}
+
+.product-rating .after {
+    content: '';
+    height: 17px;
+    width: 125px;
+    display: block;
+    margin-top: -25px;
+    color: white;
+    font-size: 25px
+}
+
+.product-rating {
+    height: 20px;
+    width: 120px;
+    background-color: #eaeaea
+}
+
+.product-rating-value {
+    height: 20px;
+    display: block;
+    background-color: #fcd118
+}
+
+.product-rating.hidden {
+    background-color: transparent
+}
+
+.listing .price {
+    margin-top: 10px
+}
+
+    .listing .price.red {
+        color: #cf3636
+    }
+
+    .listing .price .pBig {
+        font-size: 1.8em;
+        font-weight: bold
+    }
+
+.listing .CrossedPrice {
+    text-decoration: line-through
+}
+
+    .listing .CrossedPrice .pBig {
+        font-weight: bold;
+        font-size: 1.2em
+    }
+
+.red-ticket {
+    margin-left: 15px;
+    background-color: #cf3636;
+    color: white;
+    font-weight: bold;
+    padding: 2px 5px;
+    position: relative
+}
+
+    .red-ticket::before {
+        position: absolute;
+        top: 0;
+        left: -10px;
+        content: '';
+        width: 0;
+        height: 0;
+        border-right: solid 10px #cf3636;
+        border-bottom: solid 11px transparent;
+        border-top: solid 11px transparent
+    }
+
+.side-slider-cont::before, .side-slider-cont::after {
+    width: 0
+}
+
+.ssb_left, .ssb_right {
+    background-color: transparent !important
+}
+
+#last_comms {
+    margin-bottom: 60px;
+    margin-top: 20px
+}
+
+#brands_sections {
+    margin-bottom: 50px
+}
+
+#mCats {
+    text-align: center;
+    margin-bottom: 0;
+    height: 150px
+}
+
+    #mCats a {
+        font-size: 109px;
+        text-decoration: none;
+        color: #5c4d46;
+        display: inline-block;
+        width: 24%;
+        height: 150px;
+        transition: color .1s
+    }
+
+        #mCats a:hover {
+            color: #705e55
+        }
+
+        #mCats a.tuto {
+            font-size: 60px;
+            vertical-align: middle
+        }
+
+#accueil-marquesAndNormes {
+    text-align: center;
+    padding-left: 25px
+}
+
+    #accueil-marquesAndNormes a {
+        filter: grayscale(90%);
+        transition: .2s filter;
+        text-decoration: none;
+        margin: 20px 50px 50px 20px;
+        height: 0;
+        width: 119px
+    }
+
+        #accueil-marquesAndNormes a:hover {
+            filter: grayscale(0)
+        }
+
+#show_all_brands {
+    transition: color .1s;
+    color: #d8d5d4;
+    text-decoration: none;
+    border: solid 1px;
+    padding: 7px;
+    font-size: 1em;
+    display: block;
+    width: 90px;
+    border-radius: 3px;
+    margin: 20px auto 20px auto;
+    height: 18px;
+    text-align: center
+}
+
+    #show_all_brands:hover {
+        color: #5c4d46
+    }
+
+#we-help-u a.left {
+    margin-right: 25px
+}
+
+#we-help-u a {
+    width: 480px;
+    display: inline-block;
+    text-decoration: none;
+    color: #5c4d46;
+    white-space: nowrap
+}
+
+    #we-help-u a .thumbnail {
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 480px;
+        height: 200px;
+        background-position: center;
+        text-align: center;
+        position: relative
+    }
+
+    #we-help-u a .desc {
+        font-size: 1.1em;
+        margin-top: 17px;
+        white-space: normal;
+        width: 360px;
+        display: block;
+        float: left;
+        line-height: 1.6em;
+        padding-left: 15px
+    }
+
+    #we-help-u a .see-more {
+        font-size: 1.1em;
+        margin-top: 17px;
+        float: right;
+        font-weight: bold;
+        border: solid 1px #dcdbdb;
+        border-radius: 3px;
+        padding: 10px 15px 10px 15px;
+        margin-right: 15px
+    }
+
+        #we-help-u a .see-more:hover {
+            background-color: #ececec
+        }
+
+#we-help-u {
+    margin-bottom: 90px;
+    margin-top: 60px
+}
+
+    #we-help-u a .thumbnail i {
+        color: white;
+        font-size: 6em;
+        line-height: 200px;
+        opacity: 0;
+        transition: all .2s;
+        z-index: 2;
+        position: absolute;
+        left: 190px;
+        transform: scale(1.01)
+    }
+
+    #we-help-u a:hover .thumbnail i {
+        opacity: .95
+    }
+
+    #we-help-u a .thumbnail::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: black;
+        opacity: 0;
+        position: absolute;
+        z-index: 1;
+        backdrop-filter: blur(0);
+        -webkit-backdrop-filter: blur(0);
+        transition: all .2s
+    }
+
+    #we-help-u a:hover .thumbnail::before {
+        opacity: .4;
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px)
+    }
+
+    #community .contener {
+        background-color: transparent
+    }
+
+    #community h2 span {
+        background-color: #eff0f4
+    }
+
+    #community a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        height: 380px;
+        line-height: 380px;
+        width: 225px;
+        margin: 11px;
+        text-align: center;
+        float: left;
+        overflow: hidden;
+        position: relative;
+        margin-top: 0
+    }
+        #community a i {
+            font-size: 100px;
+            position: relative;
+            top: 35px;
+            transition: .5s top
+        }
+
+            #community a i.icon-facebook {
+                font-size: 120px;
+                top: 35px
+            }
+
+            #community a i.icon-blog {
+                font-size: 180px;
+                top: 60px;
+                transform: rotate(-7deg);
+                display: inline-block
+            }
+
+        #community a:hover i {
+            top: 0
+        }
+
+            #community a:hover i.icon-blog {
+                top: 30px
+            }
+
+        #community a:after {
+            content: "Voir la page";
+            background: white;
+            color: #0c1d42;
+            display: block;
+            width: 120px;
+            line-height: 28px;
+            border-radius: 14px;
+            position: absolute;
+            top: 550px;
+            margin-left: 51px;
+            opacity: .9;
+            transition: .5s top
+        }
+
+        #community a.yt:after {
+            content: "Voir la chaine"
+        }
+
+        #community a.blog:after {
+            content: "Voir le blog"
+        }
+
+        #community a.twitter:after {
+            content: "Voir le fil"
+        }
+
+        #community a:hover:after {
+            top: 280px
+        }
+
+.selection {
+    margin-bottom: 20px
+}
+
+    .selection .head {
+        color: white;
+        height: 60px;
+        line-height: 60px;
+        margin-left: 20px;
+        padding-left: 10px
+    }
+
+        .selection .head .tri {
+            position: absolute;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 30px 20px 30px 0;
+            border-color: transparent
+        }
+
+            .selection .head .tri::after {
+                content: '.';
+                color: white;
+                position: absolute;
+                font-size: 40px;
+                top: -42px;
+                left: 16px
+            }
+
+        .selection .head span {
+            font-weight: bold;
+            padding-left: 20px;
+            font-size: 1.3em
+        }
+
+        .selection .head i {
+            font-size: 1.9em;
+            position: relative;
+            left: 7px;
+            top: 5px
+        }
+
+        .selection .head a {
+            color: white;
+            border: solid 1px;
+            border-radius: 2px;
+            float: right;
+            text-decoration: none;
+            text-transform: uppercase;
+            line-height: 10px;
+            padding: 6px;
+            font-size: .9em;
+            margin: 18px
+        }
+
+#newsletter {
+    height: 150px;
+    background-color: #b8d400;
+    margin-top: 10px;
+    margin-bottom: 70px
+}
+
+    #newsletter .contener {
+        background-color: transparent;
+        background-image: url("//img.mesmateriaux.com/images/home_2017/send.png");
+        height: 150px;
+        background-repeat: no-repeat;
+        background-position-x: 65px
+    }
+
+    #newsletter .newsletter-tittle {
+        color: #7b8e00;
+        float: left;
+        font-size: 1.3em;
+        padding: 34px;
+        margin-left: 60px
+    }
+
+        #newsletter .newsletter-tittle .nsTitle {
+            color: white;
+            font-size: 2.4em;
+            font-weight: bold;
+            margin-bottom: -6px
+        }
+
+    #newsletter form {
+        float: right;
+        margin-right: 60px;
+        background-color: white;
+        width: 54%;
+        height: 38px;
+        margin-top: 48px;
+        border-radius: 30px;
+        border: solid 8px #cfe255
+    }
+
+        #newsletter form .inpTxt {
+            height: 36px;
+            border: 0;
+            border-radius: 30px;
+            background-color: white;
+            width: 71%;
+            margin-left: 2px;
+            padding-left: 20px;
+            font-size: 1.1em;
+            color: #444341
+        }
+
+            #newsletter form .inpTxt:focus {
+                outline: 0
+            }
+
+        #newsletter form button {
+            cursor: pointer;
+            border: 0;
+            height: 38px;
+            width: 23%;
+            float: right;
+            color: white;
+            background-color: #444341;
+            font-weight: bold;
+            border-radius: 30px;
+            margin-left: 1px;
+            transition: background-color .3s
+        }
+
+            #newsletter form button:hover {
+                background-color: #62615e
+            }
+
+            #newsletter form button:before {
+                content: '>';
+                transform: scaleX(0.5);
+                display: block;
+                float: left;
+                margin-left: 9px;
+                margin-right: -9px
+            }
+
+            #newsletter form button:focus {
+                outline: 0
+            }
 
 @media only screen and (max-width: 767px) {
   .banner h1 {
