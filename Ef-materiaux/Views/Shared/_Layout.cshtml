@@ -49,7 +49,7 @@
                 <div class="header-search">
                     <form>
                         <input class="input search-input" type="text" placeholder="Recherchez votre produit ici">
-                        <button class="search-btn"><i class="fa fa-search"></i></button>
+                        <button class="search-btn" asp-area="" asp-controller="Home" asp-action="Rechercher"><i class="fa fa-search"></i></button>
                     </form>
                 </div>
                 <!-- /Search -->
@@ -64,10 +64,10 @@
                     </div>
                 </div>
                 <ul class="custom-menu">
-                    <li><a href="#"><i class="fa fa-user-o"></i> Mon compte</a></li>
-                    <li><a href="#"><i class="fa fa-list-ul"></i>Mes commandes</a></li>
-                    <li><a href="#"><i class="fa fa-unlock-alt"></i> Se Connecter</a></li>
-                    <li><a href="#"><i class="fa fa-power-off"></i> Se deconnecter</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="ConsulterCompte"><i class="fa fa-user-o" ></i> Mon compte</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="ConsulterCommande"><i class="fa fa-list-ul"></i>Mes commandes</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="SeConnecter"><i class="fa fa-unlock-alt"></i> Se Connecter</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="SeDeconnecter"><i class="fa fa-power-off"></i> Se deconnecter</a></li>
                 </ul>
             </li>
             <!-- /Account -->
@@ -85,12 +85,12 @@
                     <div id="shopping-cart">
                         <div class="shopping-cart-list">
                             <div class="product product-widget">
-                                <button class="cancel-btn"><i class="fa fa-trash"></i></button>
+                                <button class="cancel-btn" asp-area="" asp-controller="Commande" asp-action="Annuler"><i class="fa fa-trash"></i></button>
                             </div>
                         </div>
                         <div class="shopping-cart-btns">
-                            <button class="main-btn">Voir mon panier</button>
-                            <button class="primary-btn">Passer ma commande <i class="fa fa-arrow-circle-right"></i></button>
+                            <button class="main-btn" asp-area="" asp-controller="Commande" asp-action="ConsulterPanier">Voir mon panier</button>
+                            <button class="primary-btn" asp-area="" asp-controller="Commande" asp-action="ValiderPanier">Passer ma commande <i class="fa fa-arrow-circle-right"></i></button>
                         </div>
                     </div>
                 </div>
@@ -120,40 +120,17 @@
                     </span>
                     <ul class="category-list">
                         <li class="dropdown side-dropdown">
-                            <a href="#">Robineries</a>
+                            <a asp-area="" asp-controller="Produit" asp-action="ConsulterRobineries">Robineries</a>
                         </li>
-                        <li><a href="#">Plomberie</a></li>
-                        <li><a href="#">Maçonnerie</a></li>
-                        <li><a href="#">Voir tout</a></li>
+                        <li><a asp-area="" asp-controller="Produit" asp-action="ConsulterPlomberie">Plomberie</a></li>
+                        <li><a asp-area="" asp-controller="Produit" asp-action="ConsulterMaconnerie">Maçonnerie</a></li>
+                        <li><a asp-area="" asp-controller="Produit" asp-action="Consulter">Voir tout</a></li>
                     </ul>
                 </div>
-                <!-- /category nav -->
-                <!-- menu nav -->
-                <!-- menu nav -->
             </div>
         </div>
         <!-- /container -->
     </div>
-    <!--<nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Ef_materiaux</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>-->
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -166,24 +143,24 @@
                     <!-- footer widget -->
                     <div class="col-md-3 col-sm-6 col-xs-6">
                         <div class="footer">
-                            <h3><a href="#">En savoir plus :</a><br /></h3>
-                            <a href="#"><p>Conditions générales<br /></p></a>
-                            <a href="#"><p>Qui sommes nous ?<br /></p></a>
-                            <a href="#"><p>Plan du site<br /></p></a>
+                            <h3>En savoir plus :<br /></h3>
+                            <a asp-area="" asp-controller="Home" asp-action="Description"><p>Conditions générales<br /></p></a>
+                            <a asp-area="" asp-controller="Home" asp-action="Description"><p>Qui sommes nous ?<br /></p></a>
+                            <a asp-area="" asp-controller="Home" asp-action="Description"><p>Plan du site<br /></p></a>
                         </div>
                     </div>
                     <!-- footer widget -->
                     <div class="col-md-3 col-sm-6 col-xs-6">
                         <div class="footer">
-                            <h3><a href="#">Contactez Nous:</a><br /></h3>
-                            <a href="#"><p>Fabricants &amp; Distributeurs<br /></p></a>
-                            <a href="#"><p>Autres contacts<br /></p></a>
+                            <h3>Contactez Nous:<br /></h3>
+                            <a asp-area="" asp-controller="Home" asp-action="Description"><p>Fabricants &amp; Distributeurs<br /></p></a>
+                            <a asp-area="" asp-controller="Home" asp-action="Description"><p>Autres contacts<br /></p></a>
                         </div>
                     </div>
                     <!-- footer widget -->
                     <div class="col-md-3 col-sm-6 col-xs-6">
                         <div class="footer">
-                            <h3><a href="#">Confiance &amp;Sécurité :</a><br /></h3>
+                            <h3>Confiance &amp;Sécurité :<br /></h3>
                             <a href="#"><p>Paiement sécurisé<br /></p></a>
                             <a href="#"><p>Tout savoir sur nos livraisons<br /></p></a>
                             <a href="#"><p>Suivi de votre commande<br /></p></a>
@@ -200,11 +177,11 @@
                             <!-- /footer logo -->
                             <!-- footer social -->
                             <ul class="footer-social">
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                <li><i class="fa fa-instagram"></i></li>
+                                <li><i class="fa fa-twitter"></i></li>
+                                <li><i class="fa fa-instagram"></i></li>
+                                <li><i class="fa fa-google-plus"></i></li>
+                                <li><i class="fa fa-pinterest"></i></li>
                             </ul>
                             <!-- /footer social -->
                         </div>
