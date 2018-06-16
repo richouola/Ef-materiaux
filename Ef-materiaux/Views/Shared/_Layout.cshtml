@@ -48,7 +48,7 @@
                 <!-- Search -->
                 <div class="header-search">
                     <form>
-                        <input class="input search-input" type="text" placeholder="Recherchez votre produit ici">
+                        <input class="input search-input" type="text" placeholder="Recherchez votre produit ici" name="produit">
                         <button class="search-btn" asp-area="" asp-controller="Home" asp-action="Rechercher"><i class="fa fa-search"></i></button>
                     </form>
                 </div>
@@ -120,11 +120,11 @@
                     </span>
                     <ul class="category-list">
                         <li class="dropdown side-dropdown">
-                            <a asp-area="" asp-controller="Produit" asp-action="ConsulterRobineries">Robineries</a>
+                            <a asp-area="" asp-controller="Home" asp-action="ConsulterCategorie" asp-route-id="Robinerie">Robineries</a>
                         </li>
-                        <li><a asp-area="" asp-controller="Produit" asp-action="ConsulterPlomberie">Plomberie</a></li>
-                        <li><a asp-area="" asp-controller="Produit" asp-action="ConsulterMaconnerie">Maçonnerie</a></li>
-                        <li><a asp-area="" asp-controller="Produit" asp-action="Consulter">Voir tout</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="ConsulterCategorie" asp-route-id="Plomberie">Plomberie</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="ConsulterCategorie" asp-route-id="Maconnerie">Maçonnerie</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="ConsulterProduits">Voir tout</a></li>
                     </ul>
                 </div>
             </div>

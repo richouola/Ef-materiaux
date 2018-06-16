@@ -29,8 +29,8 @@ namespace Ef_materiaux.Controllers
                 produit.NomProduit = "test" +i;
                 produit.NumeroProduit = ""+i;
                 produit.Prix = 1000.5;
-                produit.Categorie = "FER";
-                produit.NomImage = "FER" + i;
+                produit.Categorie = "Maconnerie";
+                produit.NomImage = "ferbarre.jpg";
                 produitViewModelsCharger.Add(produit);
 
             }
@@ -42,7 +42,7 @@ namespace Ef_materiaux.Controllers
                 produit.NumeroProduit = "" + i;
                 produit.Prix = 1000.5;
                 produit.Categorie = "Robinerie";
-                produit.NomImage = "Robinerie" + i;
+                produit.NomImage = "robinerie.jpg";
                 produitViewModelsCharger.Add(produit);
 
             }
@@ -53,8 +53,20 @@ namespace Ef_materiaux.Controllers
                 produit.NomProduit = "test" + i;
                 produit.NumeroProduit = "" + i;
                 produit.Prix = 1000.5;
-                produit.Categorie = "Maconnnerie";
-                produit.NomImage = "Maconnnerie" + i;
+                produit.Categorie = "Maconnerie";
+                produit.NomImage = "maconnerie.jpg";
+                produitViewModelsCharger.Add(produit);
+
+            }
+
+            for (int i = 0; i <= 3; i++)
+            {
+                ProduitViewModel produit = new ProduitViewModel();
+                produit.NomProduit = "test" + i;
+                produit.NumeroProduit = "" + i;
+                produit.Prix = 1000.5;
+                produit.Categorie = "Plomberie";
+                produit.NomImage = "plomberie2.jpg";
                 produitViewModelsCharger.Add(produit);
 
             }
@@ -84,6 +96,8 @@ namespace Ef_materiaux.Controllers
 
         public IActionResult Rechercher(String produit)
         {
+            ViewData["Message"] = "";
+            produitViewModels = ChargerMockProduit();
             List<ProduitViewModel> produitTrouve = new List<ProduitViewModel>();
             if( produitViewModels != null)
             {
@@ -94,11 +108,48 @@ namespace Ef_materiaux.Controllers
 
                 if (!produitTrouve.Any())
                 {
+                    ViewData["Message"] = "Aucun produit ne correspond à votre recherche. Voici les produits disponible";
                     produitTrouve.AddRange(produitViewModels);
+                }
+                else
+                {
+                    ViewData["Message"] = "Voici les produits correspondant à votre recherche";
+
                 }
             }
 
-            return View("Resultat");
+            return View("Produits", produitTrouve);
+        }
+
+        public IActionResult ConsulterCategorie(String id)
+        {
+            produitViewModels = ChargerMockProduit();
+            List<ProduitViewModel> produitTrouve = new List<ProduitViewModel>();
+            if (id == null)
+            {
+                produitTrouve = produitViewModels;
+            }
+            else
+            {
+                if (produitViewModels != null)
+                {
+                    foreach (ProduitViewModel produitModel in produitViewModels)
+                    {
+                        if (produitModel.Categorie.Equals(id))
+                            produitTrouve.Add(produitModel);
+                    }
+                }
+            }
+
+            return View("Produits", produitTrouve);
+        }
+
+
+        public IActionResult ConsulterProduits()
+        {
+            produitViewModels = ChargerMockProduit();
+
+            return View("Produits", produitViewModels);
         }
 
         public IActionResult ConsulterCommande()

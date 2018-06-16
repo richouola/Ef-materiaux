@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Ef_materiaux.Models.ProduitViewModel>
+
+@{
+    ViewData["Title"] = "Produits";
+}
+
+<div class="container">
+    <div class="home-wrap">
+        <br>
+        <br>
+        <span>@ViewData["Message"]</span>
+
+        <div class="row">
+            <!-- section title -->
+
+            @foreach (var item in Model)
+            {
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="product product-single">
+                         <img src="~/images/@Html.DisplayFor(modelItem => item.NomImage)" alt="">
+                         <div class="product-body">
+                             <h3 class="product-name">@Html.DisplayFor(modelItem => item.NomProduit)             /   @Html.DisplayFor(modelItem => item.Prix) EUROS</h3>
+                             <div class="product-rating">
+                                 <i class="fa fa-star"></i>
+                                 <i class="fa fa-star"></i>
+                                 <i class="fa fa-star"></i>
+                                 <i class="fa fa-star"></i>
+                                 <i class="fa fa-star-o empty"></i>
+                             </div>
+                             <button class="main-btn icon-btn"><i class="fa fa-shopping-cart"></i></button>
+                         </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+</div>
+
+
+
